@@ -63,7 +63,7 @@ def load_data():
 
 # Main app
 def main():
-    st.title("📊 Training Needs Analysis")
+    st.title("📊 Training Needs Analyzer")
     st.markdown("### BEED Department Extension Program")
     
     # Load data
@@ -770,4 +770,5 @@ def show_admin_tools(df):
 
 if __name__ == "__main__":
     main()
+
 
