@@ -72,7 +72,7 @@ def main():
         st.stop()
     
     # Sidebar navigation
-    st.sidebar.title("Navigation")
+    st.sidebar.title("Welcome!")
     page = st.sidebar.selectbox(
         "Select Page",
         ["Dashboard", "Cluster Profiles", "Training Recommendations", "Self Assessment", "Admin Tools"]
@@ -116,7 +116,7 @@ def show_dashboard(df):
     for cluster_id in sorted(df['Cluster'].unique()):
         cluster_size = cluster_counts[cluster_id]
         interpretation = get_cluster_interpretation(cluster_id)
-        with st.expander(f"Cluster {cluster_id} (n={cluster_size}) - Click to view interpretation", expanded=False):
+        with st.expander(f"Cluster {cluster_id} (n={cluster_size}) - Click to view interpretation", expanded=True):
             st.write(f"**Profile:** {interpretation}")
     
     st.divider()
